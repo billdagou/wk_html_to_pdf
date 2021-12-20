@@ -11,7 +11,7 @@ First of all, you need to have [wkhtmltopdf](https://wkhtmltopdf.org/) and [EXT:
 After that, you can use the viewhelper to generate the PDF file and download it.
 
     <df:http.download>
-        <wkhtmltopdf:download.pdf>...</wkhtmltopdf:download.pdf>
+        <wkhtmltopdf:http.download.pdf>...</wkhtmltopdf:http.download.pdf>
     </df:http.download>
 
 #### Attributes
