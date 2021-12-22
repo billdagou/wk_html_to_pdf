@@ -1,7 +1,7 @@
 <?php
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'Wk HTML to PDF',
-    'description' => 'Wk HTML to PDF, https://wkhtmltopdf.org/',
+    'title' => 'WK HTML to PDF',
+    'description' => 'WK HTML to PDF, https://wkhtmltopdf.org/',
     'category' => 'fe',
     'author' => 'Bill.Dagou',
     'author_email' => 'billdagou@gmail.com',
