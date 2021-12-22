@@ -7,7 +7,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 class PdfViewHelper extends AbstractViewHelper {
     public function initializeArguments() {
-        $this->registerArgument('url', 'string', 'PDF Url');
+        $this->registerArgument('url', 'string', 'Web page Url');
         $this->registerArgument('options', 'string', 'Global options');
     }
 
