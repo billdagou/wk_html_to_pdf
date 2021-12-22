@@ -11,7 +11,10 @@ class PdfViewHelper extends AbstractViewHelper {
         $this->registerArgument('options', 'string', 'Global options');
     }
 
-    public function render() {
+    /**
+     * @return string
+     */
+    public function render(): string {
         $filename = $this->viewHelperVariableContainer->get(DownloadViewHelper::class, 'filename') ?: 'Document';
 
         $this->viewHelperVariableContainer->add(DownloadViewHelper::class, 'filename', $filename.'.pdf');
