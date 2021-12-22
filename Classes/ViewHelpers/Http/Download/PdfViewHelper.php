@@ -15,9 +15,12 @@ class PdfViewHelper extends AbstractViewHelper {
      * @return string
      */
     public function render(): string {
-        $filename = $this->viewHelperVariableContainer->get(DownloadViewHelper::class, 'filename') ?: 'Document';
-
-        $this->viewHelperVariableContainer->add(DownloadViewHelper::class, 'filename', $filename.'.pdf');
+        $this->viewHelperVariableContainer->add(
+            DownloadViewHelper::class,
+            'filename',
+            ($this->viewHelperVariableContainer->get(DownloadViewHelper::class, 'filename') ?: 'Document')
+                .'.pdf'
+        );
 
         return $this->execute(
             'wkhtmltopdf'.($this->arguments['options'] ? ' '.$this->arguments['options'] : '').' - -',
