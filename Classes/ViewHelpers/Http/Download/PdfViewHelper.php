@@ -6,7 +6,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 class PdfViewHelper extends AbstractViewHelper {
-    public function initializeArguments() {
+    public function initializeArguments(): void {
         $this->registerArgument('url', 'string', 'Web page Url');
         $this->registerArgument('options', 'string', 'Global options');
     }
@@ -21,6 +21,7 @@ class PdfViewHelper extends AbstractViewHelper {
             ($this->viewHelperVariableContainer->get(DownloadViewHelper::class, 'filename') ?: 'Document')
                 .'.pdf'
         );
+        $this->viewHelperVariableContainer->add(DownloadViewHelper::class, 'mimeType', 'application/pdf');
 
         return $this->execute(
             'wkhtmltopdf'.($this->arguments['options'] ? ' '.$this->arguments['options'] : '').' - -',

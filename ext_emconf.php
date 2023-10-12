@@ -5,12 +5,14 @@ $EM_CONF[$_EXTKEY] = [
     'category' => 'fe',
     'author' => 'Bill.Dagou',
     'author_email' => 'billdagou@gmail.com',
-    'version' => '10.4.0',
     'state' => 'stable',
+    'version' => '12.4.0',
     'constraints' => [
         'depends' => [
-            'dagou_fluid' => '10.4.0-10.4.99',
-            'typo3' => '10.4.0-10.4.99',
+            'typo3' => '12.4.0-12.4.99',
+        ],
+        'suggests' => [
+            'dagou_fluid' => '',
         ],
     ],
 ];
